@@ -4,7 +4,7 @@
 ===
 1.以canvas API为核心开发
 2.纯javaScript
-+++
+===
 ###demo
 [传送门](http://www.sinreweb.com/im/)   http://www.sinreweb.com/im/
 ----------------
