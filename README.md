@@ -4,3 +4,6 @@
 ===
 1.以canvas API为核心开发
 2.纯javaScript
++++
+###dome
+[传送门](http://www.sinreweb.com/im/)
