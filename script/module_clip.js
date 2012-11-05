@@ -1,16 +1,16 @@
 /*
  * Clip v:final
  *
- * Copyright 2011, GuoAimin
+ * Copyright 2011, enix
  * Date: 2011-9-14
- *http://bluescript.iteye.com/
+ * http://www.cnblogs.com/enix
  */
 
 
 /*
- *	ÀàÃû£º[Clip]
- *	¹¦ÄÜ£ºUI×é¼þ
- *	×÷ÓÃ£º¼ô²Ã¿ò×é¼þ£¬ÎÈ¶¨°æ±¾
+ *	ï¿½ï¿½ï¿½ï¿½[Clip]
+ *	ï¿½ï¿½ï¿½Ü£ï¿½UIï¿½ï¿½ï¿½
+ *	ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¶ï¿½ï¿½æ±¾
  */
 
 delete function(window, undefined) {
@@ -30,14 +30,14 @@ delete function(window, undefined) {
         rules = {
             'TL':{
                 css:'top:0;left:0;cursor:nw-resize',
-                size:function(e) {//×óÉÏ
+                size:function(e) {//ï¿½ï¿½ï¿½ï¿½
                     rules.CL.size(e);
                     rules.TC.size(e);
                 }
             },
             'TC':{
                 css:'top:0;left:48%;cursor:n-resize',
-                size:function(e) {//ÉÏ
+                size:function(e) {//ï¿½ï¿½
                     /*that.hanlderInfo.height= Math.max(that.hanlderInfo._down - e.clientY,40);
                      that.hanlderInfo.top = that.hanlderInfo._fixTop - that.hanlderInfo.height;*/
                     that.correctY(that.hanlderInfo._down - e.clientY, that.hanlderInfo._mxTH);
@@ -46,14 +46,14 @@ delete function(window, undefined) {
             },
             'TR':{
                 css:'right:0;top:0;cursor:ne-resize',
-                size:function(e) {//ÓÒÉÏ
+                size:function(e) {//ï¿½ï¿½ï¿½ï¿½
                     rules.CR.size(e);
                     rules.TC.size(e);
                 }
             },
             'CL':{
                 css:'top:48%;left:0;cursor:w-resize',
-                size:function(e) {//×ó
+                size:function(e) {//ï¿½ï¿½
                     /*that.hanlderInfo.width = Math.max(that.hanlderInfo._right - e.clientX,40);
                      that.hanlderInfo.left = that.hanlderInfo._fixLeft - that.hanlderInfo.width;*/
                     that.correctX(that.hanlderInfo._right - e.clientX, that.hanlderInfo._mxLW);
@@ -63,28 +63,28 @@ delete function(window, undefined) {
             },
             'CR':{
                 css:'top:48%;right:0px;cursor:e-resize',
-                size:function(e) {//ÓÒ
+                size:function(e) {//ï¿½ï¿½
                     //that.hanlderInfo.width = Math.max(e.clientX - that.hanlderInfo._left,40);
                     that.correctX(e.clientX - that.hanlderInfo._left, that.hanlderInfo._mxRW);
                 }
             },
             'BL':{
                 css:'bottom:0;left:0;cursor:sw-resize',
-                size:function(e) {//×óÏÂ
+                size:function(e) {//ï¿½ï¿½ï¿½ï¿½
                     rules.CL.size(e);
                     rules.BC.size(e);
                 }
             },
             'BC':{
                 css:'bottom:0;left:48%;cursor:s-resize',
-                size:function(e) {//ÏÂ
+                size:function(e) {//ï¿½ï¿½
                     //that.hanlderInfo.height = Math.max(e.clientY-that.hanlderInfo._up,40);
                     that.correctY(e.clientY - that.hanlderInfo._top, that.hanlderInfo._mxDH);
                 }
             },
             'BR':{
                 css:'bottom:0;right:0px;cursor:se-resize',
-                size:function(e) {//ÓÒÏÂ
+                size:function(e) {//ï¿½ï¿½ï¿½ï¿½
                     rules.CR.size(e);
                     rules.BC.size(e);
                 }
@@ -207,13 +207,13 @@ delete function(window, undefined) {
             that.hanlderInfo.mxR = Math.max(that.hanlderInfo.mxR, that.hanlderInfo.mxL + 40);
             that.hanlderInfo.mxB = Math.max(that.hanlderInfo.mxB, that.hanlderInfo.mxT + 40);
 
-            //ÆðÊ¼ÐÅÏ¢
+            //ï¿½ï¿½Ê¼ï¿½ï¿½Ï¢
             that.hanlderInfo.width = parent.clientWidth;
             that.hanlderInfo.height = parent.clientHeight;
             that.hanlderInfo.left = parent.offsetLeft;
             that.hanlderInfo.top = parent.offsetTop;
 
-            //ÔªËØËÄ¸ö±ß½çµÄÎ»ÖÃ
+            //Ôªï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ß½ï¿½ï¿½Î»ï¿½ï¿½
             that.hanlderInfo._left = rect.left;
             that.hanlderInfo._right = rect.right;
             that.hanlderInfo._top = rect.top;
@@ -300,7 +300,7 @@ delete function(window, undefined) {
 
         };
         indicator.fn.setProp = function(a, b) {
-            that.info.innerHTML = '¿í:' + Math.ceil(a) + 'px&nbsp;&nbsp;¸ß:' + Math.ceil(b) + 'px&nbsp;&nbsp;±ÈÀý:' + that.proportion(a, b);
+            that.info.innerHTML = 'ï¿½ï¿½:' + Math.ceil(a) + 'px&nbsp;&nbsp;ï¿½ï¿½:' + Math.ceil(b) + 'px&nbsp;&nbsp;ï¿½ï¿½ï¿½ï¿½:' + that.proportion(a, b);
         };
         indicator.fn.proportion = function (x, y) {
             x = x.toPrecision(1),y = y.toPrecision(1);

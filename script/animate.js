@@ -1,3 +1,10 @@
+/*
+ * Accordion v1.0
+ *
+ * Copyright 2011, enix
+
+ * http://www.cnblogs.com/enix
+ */
 function Animate(o,property,data){
 		var that=this,indicator=arguments.callee,origin=null,config=null,data=data ||{};
 		if(1!==o.nodeType) return false;

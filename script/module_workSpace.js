@@ -2,18 +2,18 @@
 /*
  * ImageMagic v0.9
  *
- * Copyright 2011, GuoAimin
+ * Copyright 2011, enix
  * Includes toolkit lib
  * Date: 2011-9-14
  * lastmodified: 2011-12-20
- *http://bluescript.iteye.com/
+ * http://www.cnblogs.com/enix
  */
 
 
 /*
- *	ÀàÃû£º[WorkSpace]
- *	¹¦ÄÜ£ººËÐÄ×é¼þ
- *	×÷ÓÃ£ºÊµÏÖ¹¤×÷Çø¹¦ÄÜ
+ *	ï¿½ï¿½ï¿½ï¿½[WorkSpace]
+ *	ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ *	ï¿½ï¿½ï¿½Ã£ï¿½Êµï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 void function(window, undefined) {
     var WorkSpace;
@@ -43,7 +43,7 @@ void function(window, undefined) {
         indicator.fn = indicator.prototype;
         indicator.fn.constructor = indicator;
 
-        indicator.fn.workSpaceControl = function () { //¹¤×÷Çøµ÷Õû¿í¸ßÊ¹Æä³äÂúä¯ÀÀÆ÷ÊÓ¿Ú
+        indicator.fn.workSpaceControl = function () { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
             var op = {
                 toolbar: doc.getElementById(IMC.toolbar),
                 leftSidebar: doc.getElementById(IMC.leftSidebar),
@@ -73,10 +73,10 @@ void function(window, undefined) {
             IM.availSize || (IM.availSize = null);
             IM.availSize = [workWidth, workHeight];
         };
-        indicator.fn.canvasControl = function () { //´´½¨canvas±êÇ©²¢»º´æ
+        indicator.fn.canvasControl = function () { //ï¿½ï¿½ï¿½ï¿½canvasï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             IM.canvas = tk.getHtmlElement('canvas');
         };
-        indicator.fn.workInit = function () { //Í¼Æ¬ÉÏ´«×é¼þ¿ØÖÆÆ÷
+        indicator.fn.workInit = function () { //Í¼Æ¬ï¿½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             var that = this,
                 btn = doc.getElementById(IMC.imageLoader.btn);
 
@@ -296,8 +296,8 @@ void function(window, undefined) {
 
                     //console.log(tempdata);
                     if (tempdata.length === 0) {
-                        //alert('ÇëÑ¡ÔñÒªÉÏ´«µÄÍ¼Æ¬£¡');
-                        tips=IM.dailog({name:'uploadTips',title:'ÌáÊ¾',html:'<p><b>ÇëÑ¡ÔñÒªÉÏ´«µÄÍ¼Æ¬£¡</b></p><p>2Ãëºó×Ô¶¯¹Ø±Õ</p>',width:300,height:100},function(){
+                        //alert('ï¿½ï¿½Ñ¡ï¿½ï¿½Òªï¿½Ï´ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½');
+                        tips=IM.dailog({name:'uploadTips',title:'ï¿½ï¿½Ê¾',html:'<p><b>ï¿½ï¿½Ñ¡ï¿½ï¿½Òªï¿½Ï´ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½</b></p><p>2ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ø±ï¿½</p>',width:300,height:100},function(){
                             setTimeout(function(){tips.removeDailog()},2000);
                         });
 
@@ -319,7 +319,7 @@ void function(window, undefined) {
                                 var temp = eval('(' + a + ')'); //(new Function('return '+a))();
                                 ({
                                     'ok': function () {
-                                        dailog.container.innerHTML='<p><b>Ñ¡ÖÐÍ¼Æ¬ÒÑÉÏ´«Íê³É£¡</b></p>';
+                                        dailog.container.innerHTML='<p><b>Ñ¡ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½É£ï¿½</b></p>';
                                         setTimeout(function(){dailog.removeDailog();},1000);
                                         if(temp.photoids){
 											that.photosId.push(temp.photoids);
@@ -342,7 +342,7 @@ void function(window, undefined) {
 	                                    }
                                     },
                                     'error': function () {
-                                        alert('ÉÏ´«Ê§°Ü');
+                                        alert('ï¿½Ï´ï¿½Ê§ï¿½ï¿½');
                                         dailog.removeDailog();
                                     }
 
@@ -351,7 +351,7 @@ void function(window, undefined) {
                             },
                             failure: function (stauts) {
                                 dailog.removeDailog();
-                                alert('ajaxÇëÇóÊ§°Ü:' + stauts);
+                                alert('ajaxï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½:' + stauts);
                             }
                         };
                     //alert(elem)
@@ -369,7 +369,7 @@ void function(window, undefined) {
                         callback: callback,
                         postVars: encodeURI(data)
                     },function(){
-                        dailog=IM.dailog({name :'uploading',title:'ÉÏ´«',html:'<p><b>ÕýÔÚÉÏ´«,ÇëÄÍÐÄµÈ´ý£¡</b></p><p><input type="button" id="uploadImageCancel" value="  È¡Ïû  " /> </p>',width:300,height:100},function(){
+                        dailog=IM.dailog({name :'uploading',title:'ï¿½Ï´ï¿½',html:'<p><b>ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ÄµÈ´ï¿½</b></p><p><input type="button" id="uploadImageCancel" value="  È¡ï¿½ï¿½  " /> </p>',width:300,height:100},function(){
                             var btn=doc.getElementById('uploadImageCancel'),that=this,parent=that.cancel.parentNode,rmbtn=null,cancelBtn=null;
                             try{rmbtn=parent.removeChild(that.cancel);}catch(e){alert(e)};
                             cancelBtn=rmbtn.cloneNode(true);
@@ -448,7 +448,7 @@ void function(window, undefined) {
                     } catch (e) {
                     }
                     that.imageListLength--;
-                    that.galleryMassage.innerHTML = 'Í¼Æ¬×ÜÊý£º' + (that.imageListLength);
+                    that.galleryMassage.innerHTML = 'Í¼Æ¬ï¿½ï¿½ï¿½ï¿½' + (that.imageListLength);
 
                     //console.log(that.imageListLength+' ');
                     that.imageListLength = that.imageListLength < 0 ? Math.abs(that.imageListLength) : that.imageListLength;
@@ -484,14 +484,14 @@ void function(window, undefined) {
 //                that.reader.readAsDataURL(file.shift())
 //            } catch (e) {}
 //        };
-        /*indicator.fn.imageNativeSrc = function(img) {//»ñµÃ±¾µØÉÏ´«µÄÍ¼Æ¬Êý¾Ý
+        /*indicator.fn.imageNativeSrc = function(img) {//ï¿½ï¿½Ã±ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½
          var srcs = img.files,that = this;
          IM.tk.each(srcs, function(a, b) {
          if (b.type === 'image/jpeg' && b.size < IMC.imageLoader.dataSize) {
          that.fileAPIReader(b);
          }
          if (b.size > IMC.imageLoader.dataSize) {
-         alert('ÌáÊ¾£ºÍ¼Æ¬' + b.name + '´óÐ¡³¬¹ý ' + IMC.imageLoader.dataSize / 1024000 + 'M ÏÞÖÆ£¬Ã»ÓÐµ¼Èë£¡');
+         alert('ï¿½ï¿½Ê¾ï¿½ï¿½Í¼Æ¬' + b.name + 'ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ ' + IMC.imageLoader.dataSize / 1024000 + 'M ï¿½ï¿½ï¿½Æ£ï¿½Ã»ï¿½Ðµï¿½ï¿½ë£¡');
          }
          });
          };*/
@@ -520,7 +520,7 @@ void function(window, undefined) {
             } catch (e) {
             }
         };
-        indicator.fn.imageNativeSrc = function (img) { //»ñµÃ±¾µØÉÏ´«µÄÍ¼Æ¬Êý¾Ý
+        indicator.fn.imageNativeSrc = function (img) { //ï¿½ï¿½Ã±ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½
             var srcs = img.files,
                 that = this,
                 arr = [],
@@ -528,17 +528,17 @@ void function(window, undefined) {
 
             IM.tk.each(srcs, function (a, b) {
                 if (b.size > IMC.imageLoader.dataSize) {
-                    //alert('ÌáÊ¾£ºÍ¼Æ¬' + b.name + '´óÐ¡³¬¹ý ' + IMC.imageLoader.dataSize / 1024000 + 'M ÏÞÖÆ£¬Ã»ÓÐµ¼Èë£¡');
+                    //alert('ï¿½ï¿½Ê¾ï¿½ï¿½Í¼Æ¬' + b.name + 'ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ ' + IMC.imageLoader.dataSize / 1024000 + 'M ï¿½ï¿½ï¿½Æ£ï¿½Ã»ï¿½Ðµï¿½ï¿½ë£¡');
 
-                    /*temp=IM.dailog({name :a,title:'ÌáÊ¾',html:'<p align="center">Í¼Æ¬' + b.name + '´óÐ¡³¬¹ý ' + IMC.imageLoader.dataSize / 1024000 + 'M ÏÞÖÆ£¬Ã»ÓÐµ¼Èë£¡</p><p align="center">2Ãëºó×Ô¶¯¹Ø±Õ</p>',width:300,height:100},function(){
+                    /*temp=IM.dailog({name :a,title:'ï¿½ï¿½Ê¾',html:'<p align="center">Í¼Æ¬' + b.name + 'ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ ' + IMC.imageLoader.dataSize / 1024000 + 'M ï¿½ï¿½ï¿½Æ£ï¿½Ã»ï¿½Ðµï¿½ï¿½ë£¡</p><p align="center">2ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ø±ï¿½</p>',width:300,height:100},function(){
                         //var that=this;
                         //this.removeDailog()
                         //setTimeout(function(){temp.removeDailog()},2000);
                     });*/
 
-                    temp || (temp=IM.dailog({name :'imageSizeTip',title:'ÌáÊ¾',width:360,height:120}));
+                    temp || (temp=IM.dailog({name :'imageSizeTip',title:'ï¿½ï¿½Ê¾',width:360,height:120}));
 
-                    temp.container.innerHTML+='<p>'+a+'.Í¼Æ¬<b>' + b.name + '</b>´óÐ¡³¬¹ý ' + IMC.imageLoader.dataSize / 1024000 + 'M ÏÞÖÆ£¬Ã»ÓÐµ¼Èë£¡</p>';
+                    temp.container.innerHTML+='<p>'+a+'.Í¼Æ¬<b>' + b.name + '</b>ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ ' + IMC.imageLoader.dataSize / 1024000 + 'M ï¿½ï¿½ï¿½Æ£ï¿½Ã»ï¿½Ðµï¿½ï¿½ë£¡</p>';
 
                 }
                 if (b.type === 'image/jpeg' && b.size < IMC.imageLoader.dataSize) {
@@ -567,8 +567,8 @@ void function(window, undefined) {
                 var data = b[0];
                 //console.log(data.imgdata)
                 data.status === 'ok' && (that.initWebLoader(),that.createImageList('data:image/jpeg;base64,'+data.imgdata,data.name),that.setImageList()/*,that.setWebSrc.call(that, 'data:image/jpeg;base64,' + data.imgdata, data.name)*/);
-                //that.setWebSrc.call(that,'data:image/jpeg;base64,'+data.imgdata,data.name)ÐÂÔö
-                data.status === 'error' && (alert('ÍøÂçÍ¼Æ¬¶ÁÈ¡Ê§°Ü'),that.initWebLoader());
+                //that.setWebSrc.call(that,'data:image/jpeg;base64,'+data.imgdata,data.name)ï¿½ï¿½ï¿½ï¿½
+                data.status === 'error' && (alert('ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½È¡Ê§ï¿½ï¿½'),that.initWebLoader());
             });
         };
         indicator.fn.setWebSrc = function (src, name) {
@@ -616,7 +616,7 @@ void function(window, undefined) {
             that.imageList.appendChild(dummy);
             that.imageListLength++;
 
-            that.galleryMassage.innerHTML = 'Í¼Æ¬×ÜÊý£º' + that.imageListLength;
+            that.galleryMassage.innerHTML = 'Í¼Æ¬ï¿½ï¿½ï¿½ï¿½' + that.imageListLength;
         };
         /*indicator.fn.createImageList = function () {
          var that = this;
@@ -625,7 +625,7 @@ void function(window, undefined) {
          that.index++;
          };*/
         indicator.fn.setImageList = function() {
-            that.galleryMassage.innerHTML = 'Í¼Æ¬×ÜÊý£º' + that.imageListLength;
+            that.galleryMassage.innerHTML = 'Í¼Æ¬ï¿½ï¿½ï¿½ï¿½' + that.imageListLength;
             //console.log(that.imageListLength);
             that.imageListLength > 0 && (
                 that.addImageListCheckboxEvent(),
@@ -639,7 +639,7 @@ void function(window, undefined) {
         };
         /*indicator.fn.setImageList = function () {
          that.imageList.innerHTML += that.html.join('');
-         that.galleryMassage.innerHTML = 'Í¼Æ¬×ÜÊý£º' + that.imageListLength;
+         that.galleryMassage.innerHTML = 'Í¼Æ¬ï¿½ï¿½ï¿½ï¿½' + that.imageListLength;
          that.imageListLength > 0 && (IM.animate.fadeIn.call(that.imageList, 50, function () {
          that.addImageListCheckboxEvent(),that.addImageListImgEvent()
          }),(IM.tk.currentStyle(that.galleryTitle, 'opacity') === '0' && IM.animate.fadeIn.call(that.galleryTitle, 50)));
@@ -663,7 +663,7 @@ void function(window, undefined) {
 
             }, false);
             tk.addEvent(IM.img, 'error', function () {
-                alert('Í¼Æ¬¶ÁÈ¡Ê§°Ü£¬ÇëÊ¹ÓÃCtrl+F5');
+                alert('Í¼Æ¬ï¿½ï¿½È¡Ê§ï¿½Ü£ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ctrl+F5');
             }, false);
             IM.sourceImg = imgSrc;
             IM.img.src = imgSrc;
@@ -737,7 +737,7 @@ void function(window, undefined) {
 
                     //target.style.cssText='background:#4D90FE;box-shadow:none;color:white;1px solid #666;';
                     target.disabled = 'true';
-                    target.value = ' ÒÑÓ¦ÓÃ ';
+                    target.value = ' ï¿½ï¿½Ó¦ï¿½ï¿½ ';
                     target.className = 'highlight';
                 }, false)
                 /*b.onfocus=function(){
@@ -767,7 +767,7 @@ void function(window, undefined) {
 
         //interface [init] [destroy]
         //////////////////////////////////////////////////////////////////////////////////////////
-        IM._clip = { //¹¤×÷Çø¼ô²Ã¾²Ì¬·½·¨
+        IM._clip = { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
             init: function () {
 
                 try {
@@ -782,8 +782,8 @@ void function(window, undefined) {
                 that.button = doc.getElementById('Button' + IM.editing);
 
 
-                that.defaultValue.call(that); //ÆôÓÃ¹¤×÷ÇøclipÔ¤ÖÃ¼ô²Ã¿ò
-                that.clientValue(); //ÆôÓÃ¹¤×÷ÇøclipÓÃ»§×Ô¶¨Òå¼ô²Ã¿ò
+                that.defaultValue.call(that); //ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½clipÔ¤ï¿½Ã¼ï¿½ï¿½Ã¿ï¿½
+                that.clientValue(); //ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½clipï¿½Ã»ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½
                 that.w.value = IMC.areaSize[0];
                 that.h.value = IMC.areaSize[1];
 
@@ -828,7 +828,7 @@ void function(window, undefined) {
                 }
                 return [(x / z),(y / z)];
             },
-            uploadImg: function () { //äÖÈ¾¼ô²Ã»ñµÃµÄÍ¼Æ¬
+            uploadImg: function () { //ï¿½ï¿½È¾ï¿½ï¿½ï¿½Ã»ï¿½Ãµï¿½Í¼Æ¬
                 var canvas = IM.canvas,
                     cxt = canvas.getContext('2d'),
                     newImg, temp = IM.clip.getData(),
@@ -857,7 +857,7 @@ void function(window, undefined) {
 				   callback: callback,
 				   postVars: 'dimen='+(that.w.value+'*'+that.h.value)
 			   },function(){
-				   alert('ÊÕ²Ø³É¹¦');
+				   alert('ï¿½Õ²Ø³É¹ï¿½');
 			   });*/
 		        var that=IM._clip,config=IM.config.dataURL.clientAreaSize,url=config.url,param=config.param,dailog=null;
 				console.log(param);
@@ -869,14 +869,14 @@ void function(window, undefined) {
 			        if(!b) return ;
 
 			        that.select.length = 0;
-                    that.select[0] = new Option('---ÇëÑ¡Ôñ---');
+                    that.select[0] = new Option('---ï¿½ï¿½Ñ¡ï¿½ï¿½---');
                     that.select.options[0].disabled = 'true';
                     IM.tk.each(b, function (x, y) {
                         that.select.options[x + 1] = new Option(y);
                     });
                     that.select.options[0].selected = 'selected';
 
-			        IM.dailog({name:'uploadTips',title:'ÌáÊ¾',html:'<p>ÊÕ²Ø³É¹¦</p><p>2Ãëºó×Ô¶¯¹Ø±Õ</p>',width:300,height:100},function(){
+			        IM.dailog({name:'uploadTips',title:'ï¿½ï¿½Ê¾',html:'<p>ï¿½Õ²Ø³É¹ï¿½</p><p>2ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ø±ï¿½</p>',width:300,height:100},function(){
                         var that=this;
                         setTimeout(function(){that.removeDailog()},2000);
                     });
@@ -890,7 +890,7 @@ void function(window, undefined) {
                 IM.tk.dynamicScriptProxy(temp.url, temp.param, function (b) {
 
                     that.select.length = 0;
-                    that.select[0] = new Option('---ÇëÑ¡Ôñ---');
+                    that.select[0] = new Option('---ï¿½ï¿½Ñ¡ï¿½ï¿½---');
 	                that.select[0].disabled=true;
                     that.select.options[0].disabled = 'true';
                     IM.tk.each(b, function (x, y) {
@@ -902,7 +902,7 @@ void function(window, undefined) {
                     //that.select.disabled=true;
                 });
             },
-            areaCut: function (x, y) { //Éú³É¼ô²Ã¿ò
+            areaCut: function (x, y) { //ï¿½ï¿½É¼ï¿½ï¿½Ã¿ï¿½
                 var that = IM._clip,
                     area = IM.clip.area,
                     clipBtn = doc.getElementById(IMW.button[0]);
@@ -960,7 +960,7 @@ void function(window, undefined) {
                 }
                 return false;
             },
-            getImage: function () { //»ñÈ¡¼ô²ÃÍ¼Æ¬£¬ÖØÖÃ¼ô²Ã¿ò¶¥µãÖÁ0 0
+            getImage: function () { //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½Ã¿ò¶¥µï¿½ï¿½ï¿½0 0
                 try {
                     IM._clip.uploadImg();
                     IM.clip.area.style.left = '0px',IM.clip.area.style.top = '0px'
@@ -970,7 +970,7 @@ void function(window, undefined) {
             removeArea: function (fn) {
                 IM.clip.removeArea(fn);
             },
-            defaultValue: function () { //¹¤×÷ÇøÄ¬ÈÏÅäÖÃ
+            defaultValue: function () { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 var node = doc.getElementById('clipDeafult'),
                     radio = doc.getElementById('clipRadioDefault'),
                     value = null,
@@ -1044,7 +1044,7 @@ void function(window, undefined) {
         };
 
 
-        IM._scale = { //¹¤×÷ÇøËõ·Å¾²Ì¬·½·¨
+        IM._scale = { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
             x: 1,
             y: 1,
             scaleDW: 'scaleDW',
@@ -1225,7 +1225,7 @@ void function(window, undefined) {
             }
         };
         //////////////////////////////////////////////////////////////////////////////////////////
-        IM._rotate = { //57¡ã17'44.806' Ò»»¡¶È
+        IM._rotate = { //57ï¿½ï¿½17'44.806' Ò»ï¿½ï¿½ï¿½ï¿½
             a: 1,
             b: -1,
             m: 0,
@@ -1352,7 +1352,7 @@ void function(window, undefined) {
                 };
                 n && (rules)[that.m]()
 
-                //Ë®Æ½´¹Ö±·­×ª
+                //Ë®Æ½ï¿½ï¿½Ö±ï¿½ï¿½×ª
                 n || (
 
                     //cxt.translate(0,w),
@@ -1467,7 +1467,7 @@ void function(window, undefined) {
                     /*if (that.canvas.width > markImg.width && that.canvas.height > markImg.height) {
                      that.previewMark(markImg);
                      } else {
-                     alert('Ë®Ó¡³ß´ç²»ÄÜ´óÓÚÍ¼Æ¬³ß´ç');
+                     alert('Ë®Ó¡ï¿½ß´ç²»ï¿½Ü´ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ß´ï¿½');
                      that.removePreview();
                      return false;
                      };*/
@@ -1631,8 +1631,8 @@ void function(window, undefined) {
             uploadImg: function () {
                 var that = this,img = new Image;
                 if (that.markSrc == null) {
-                    //alert('ÇëÑ¡ÔñË®Ó¡');
-                    IM.dailog({name:'uploadTips',title:'ÌáÊ¾',html:'<p>ÇëÑ¡ÔñË®Ó¡!</p><p>2Ãëºó×Ô¶¯¹Ø±Õ</p>',width:300,height:100},function(){
+                    //alert('ï¿½ï¿½Ñ¡ï¿½ï¿½Ë®Ó¡');
+                    IM.dailog({name:'uploadTips',title:'ï¿½ï¿½Ê¾',html:'<p>ï¿½ï¿½Ñ¡ï¿½ï¿½Ë®Ó¡!</p><p>2ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ø±ï¿½</p>',width:300,height:100},function(){
                         var that=this;
                         setTimeout(function(){that.removeDailog()},2000);
                     });
@@ -1644,8 +1644,8 @@ void function(window, undefined) {
                 img.onload = function () {
                     that.xy = that.getXY(img);
                     if (that.xy === false) {
-                        //alert('ÇëÑ¡ÔñË®Ó¡Î»ÖÃ');
-                        IM.dailog({name:'uploadTips',title:'ÌáÊ¾',html:'<p>ÇëÑ¡ÔñË®Ó¡Î»ÖÃ!</p><p>2Ãëºó×Ô¶¯¹Ø±Õ</p>',width:300,height:100},function(){
+                        //alert('ï¿½ï¿½Ñ¡ï¿½ï¿½Ë®Ó¡Î»ï¿½ï¿½');
+                        IM.dailog({name:'uploadTips',title:'ï¿½ï¿½Ê¾',html:'<p>ï¿½ï¿½Ñ¡ï¿½ï¿½Ë®Ó¡Î»ï¿½ï¿½!</p><p>2ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ø±ï¿½</p>',width:300,height:100},function(){
                             var that=this;
                             setTimeout(function(){that.removeDailog()},2000);
                         });

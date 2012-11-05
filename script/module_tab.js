@@ -1,9 +1,9 @@
 /*
  * Tab v:final
  *
- * Copyright 2011, GuoAimin
+ * Copyright 2011, enix
  * Date: 2011-9-14
- *http://bluescript.iteye.com/
+ * http://www.cnblogs.com/enix
  */
 
 

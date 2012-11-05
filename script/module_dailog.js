@@ -1,17 +1,17 @@
 /*
  * Dailog v:1.0
  *
- * Copyright 2011, GuoAimin
+ * Copyright 2011, enix
  * Date: 2011-11-14
  * Includes toolkit lib
- *http://bluescript.iteye.com/
+ * http://www.cnblogs.com/enix
  */
 
 
 /*
- *	ÀàÃû£º[Dailog]
- *	¹¦ÄÜ£ºUI×é¼þ
- *	×÷ÓÃ£º¶Ô»°¿ò
+ *	ï¿½ï¿½ï¿½ï¿½[Dailog]
+ *	ï¿½ï¿½ï¿½Ü£ï¿½UIï¿½ï¿½ï¿½
+ *	ï¿½ï¿½ï¿½Ã£ï¿½ï¿½Ô»ï¿½ï¿½ï¿½
  */
 
 delete function (window, undefined) {
@@ -34,8 +34,8 @@ delete function (window, undefined) {
 
 
         that.html = O.html;
-        that.titleTxt = O.title || '±êÌâ';
-        that.buttonText = O.btn || ' È·¶¨ ';
+        that.titleTxt = O.title || 'ï¿½ï¿½ï¿½ï¿½';
+        that.buttonText = O.btn || ' È·ï¿½ï¿½ ';
         that.hasMask = O.hasMask || true;
         that.hasCancel = O.cancel || true;
         that.cancelTxt = O.cancelTxt || ' X ';

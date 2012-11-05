@@ -1,4 +1,10 @@
+/*
+ * Accordion v1.0
+ *
+ * Copyright 2011, enix
 
+ * http://www.cnblogs.com/enix
+ */
 
 var dom=function DomReady(){
 	var userAgent = navigator.userAgent.toLowerCase(),

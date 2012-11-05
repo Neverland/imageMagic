@@ -1,11 +1,11 @@
 /*
  * ImageMagic v0.5
  *
- * Copyright 2011, GuoAimin
+ * Copyright 2011, enix
  * Includes toolkit lib
  * Date: 2011-9-14
  * lastmodified: 2011-12-20
- *http://bluescript.iteye.com/
+ * http://www.cnblogs.com/enix
  */
  
  

@@ -1,16 +1,16 @@
 /*
  * Ajax v:1.0
  *
- * Copyright 2011, GuoAimin
+ * Copyright 2011, enix
  * Date: 2011-9-29
- *http://bluescript.iteye.com/
+ * http://www.cnblogs.com/enix
  */
  
  
 /*
- *	ÀàÃû£º[Ajax]
- *	¹¦ÄÜ£º¹¦ÄÜ×é¼þ
- *	×÷ÓÃ£º·¢ËÍajaxÇëÇó
+ *	ï¿½ï¿½ï¿½ï¿½[Ajax]
+ *	ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ *	ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ajaxï¿½ï¿½ï¿½ï¿½
  */
 
 delete function(window,undefined){

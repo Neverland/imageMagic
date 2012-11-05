@@ -1,9 +1,10 @@
 /*
  * ImageMagic v0.5
  *
- * Copyright 2011, GuoAimin
+ * Copyright 2011, enix
  * Includes toolkit lib
  * Date: 2011-9-14
+ * http://www.cnblogs.com/enix
  */
 
 

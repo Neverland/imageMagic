@@ -1,16 +1,16 @@
 /*
  * Animate v1.0
  *
- * Copyright 2011, GuoAimin
+ * Copyright 2011, enix
  * Date: 2011-9-14
- *http://bluescript.iteye.com/
+ * http://www.cnblogs.com/enix
  */
  
  
 /*
- *	ÀàÃû£º[Animate]
- *	¹¦ÄÜ£º¶¯»­×é¼þ
- *	×÷ÓÃ£º¶¯»­
+ *	ï¿½ï¿½ï¿½ï¿½[Animate]
+ *	ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ *	ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 delete function(window,undefined){
 function Animate(o,property,data){

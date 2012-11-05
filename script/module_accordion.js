@@ -1,16 +1,16 @@
 /*
  * Accordion v1.0
  *
- * Copyright 2011, GuoAimin
+ * Copyright 2011, enix
  * Date: 2011-9-14
- *http://bluescript.iteye.com/
+ * http://www.cnblogs.com/enix
  */
  
  
 /*
- *	ÀàÃû£º[Accordion]
- *	¹¦ÄÜ£ºUI×é¼þ
- *	×÷ÓÃ£ºÊÖ·çÇÙ×é¼þ
+ *	ï¿½ï¿½ï¿½ï¿½[Accordion]
+ *	ï¿½ï¿½ï¿½Ü£ï¿½UIï¿½ï¿½ï¿½
+ *	ï¿½ï¿½ï¿½Ã£ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 
 delete function(){

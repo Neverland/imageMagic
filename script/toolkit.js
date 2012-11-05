@@ -1,18 +1,18 @@
 /*
  * toolkit lib v1.0
  *
- * Copyright 2011, GuoAimin
+ * Copyright 2011, enix
  * Includes toolkit lib
  * Date: 2011-9-14
  * lastmodified: 2011-11-20
- *http://bluescript.iteye.com/
+ * http://www.cnblogs.com/enix
  */
 
 
 /*
- *	ÀàÃû£º[toolKit]
- *	¹¦ÄÜ£ººËÐÄ×é¼þ
- *	×÷ÓÃ£ºÎ¢ÐÍÀà¿â
+ *	ï¿½ï¿½ï¿½ï¿½[toolKit]
+ *	ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ *	ï¿½ï¿½ï¿½Ã£ï¿½Î¢ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 
 delete function(window, undefined) {
@@ -150,12 +150,12 @@ delete function(window, undefined) {
 					return Object.prototype.toString.call(obj) === "[object Function]";
 				};
 				dom.Ready = function(fn) {
-					dom.initReady();//Èç¹ûÃ»ÓÐ½¨³ÉDOMÊ÷£¬Ôò×ßµÚ¶þ²½£¬´æ´¢ÆðÀ´Ò»ÆðÉ±
+					dom.initReady();//ï¿½ï¿½ï¿½Ã»ï¿½Ð½ï¿½ï¿½ï¿½DOMï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßµÚ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½É±
 					if (dom.isFunction(fn)) {
 						if (dom.isReady) {
-							fn();//Èç¹ûÒÑ¾­½¨³ÉDOM£¬ÔòÀ´Ò»¸öÉ±Ò»¸ö
+							fn();//ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½DOMï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½É±Ò»ï¿½ï¿½
 						} else {
-							dom.push(fn);//´æ´¢¼ÓÔØÊÂ¼þ
+							dom.push(fn);//ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 						}
 					}
 				};
@@ -166,12 +166,12 @@ delete function(window, undefined) {
 						var fn = dom[i];
 						fn();
 					}
-					dom.length = 0;//Çå¿ÕÊÂ¼þ
+					dom.length = 0;//ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 				};
 				dom.initReady = function() {
 					if (doc.addEventListener) {
 						doc.addEventListener("DOMContentLoaded", function() {
-							doc.removeEventListener("DOMContentLoaded", arguments.callee, false);//Çå³ý¼ÓÔØº¯Êý
+							doc.removeEventListener("DOMContentLoaded", arguments.callee, false);//ï¿½ï¿½ï¿½ï¿½ï¿½Øºï¿½ï¿½ï¿½
 							dom.fireReady();
 						}, false);
 					} else {
@@ -228,7 +228,7 @@ delete function(window, undefined) {
 				script.setAttribute('src', src);
 				doc.getElementsByTagName('head')[0].appendChild(script);
 			},
-			trigger:function(elem, evType) {//·â×°Ä£ÄâÓÃ»§ÐÐÎªµÄ·½·¨¡£
+			trigger:function(elem, evType) {//ï¿½ï¿½×°Ä£ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Îªï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½
 				var event,doc = document;
 				undefined !== doc.createEvent ? (event = doc.createEvent('MouseEvents'),event.initMouseEvent(evType, true, true, document.defaultView, 0, 0, 0, 0, 0, false, false, false, false, 0, null),elem.dispatchEvent(event)) : (event = doc.createEventObject(),event.screenX = 100,event.screenY = 0,event.clientX = 0,event.clientY = 0,event.ctrlKey = false,event.altKey = false,event.shiftKey = false,event.button = false,elem.fireEvent('on' + evType, event));
 			},
