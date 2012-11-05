@@ -8,5 +8,5 @@
 ###dome
 [传送门](http://www.sinreweb.com/im/)
 ----------------
->稍后会在http://www.cnblogs.com/enix上放出设计，架构文档,敬请期待！
+>稍后会在   http://www.cnblogs.com/enix     上放出设计，架构文档,敬请期待！
 
