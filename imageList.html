@@ -1,0 +1,118 @@
+<!DOCTYPE html
+		PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+	<title>上传图片列表</title>
+	<link href="style/cssreset.css" rel="stylesheet" type="text/css"/>
+	<style type="text/css">
+		table { border-collapse:collapse; }
+
+		tbody tr:nth-child(odd) { background-color:#eee; }
+		#uploadResult { padding:10px; width: 800px; }
+		#uploadResult a { color: blue; text-decoration:underline; }
+		#uploadResult td { padding: 5px;  }
+		#uploadResult td:nth-child(odd) { text-align:center; }
+		#uploadResult tbody td { border:solid 1px #ddd; }
+		#uploadResult table { border:solid 1px #ddd; }
+		#uploadResult thead { background:#ddd; }
+		#uploadResult img { border:1px solid #ddd; background:#FFF; border-radius:3px; max-height: 75px; }
+		#uploadResult tbody b { margin-left:10px; font-weight:normal; color: red; }
+	</style>
+	<script type="text/javascript">this.imageMagic || (this.imageMagic = {});</script>
+	<script type="text/javascript" src="script/toolkit.js"></script>
+	<base target="_blank" />
+</head>
+<body>
+<div id="uploadResult">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<colgroup><col width="120" /></colgroup>
+	<thead>
+        <tr>
+            <td>共上传了<b id="total"></b>张图片</td>
+            <td align="right"><input type="button" id="end" value="继续处理并上传图片"  /></td>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</div>
+
+<script type="text/javascript">
+	(function(){
+		var doc=document,
+			tk=imageMagic.tk,
+			imageList;
+
+
+		imageList={
+			init:function(){
+				var that=this;
+
+				that.data=(decodeURI(location.search)).replace(/\?data=/,'').split(',');
+
+				if(that.data[0].length===0) { window.close(); document.documentElement.innerHTML=''; return;}
+				that.root=doc.getElementsByTagName('body')[0],
+				that.total=doc.getElementById('total'),
+				that.end=doc.getElementById('end'),
+				that.container=doc.querySelector('#uploadResult tbody'),
+				that.reg=/\/s(\w{19})/ig;
+				that.html=[];
+				that.creatList();
+				that.copyLink();
+
+				tk.addEvent(that.end,'click',function(){
+					window.close();
+				},false);
+			},
+			copyLink:function(){
+				var that=this;
+				tk.addEvent(that.container,'click',function(e){
+					e=tk.getEvent(e);
+					var target=tk.getTarget(e);
+					(target.nodeType===1 && target.nodeName.toLowerCase()==='input') && (that.getLink(e,target));
+				},false)
+			},
+			getLink:function(e,elem){
+				var that=this,data=that.data[elem.getAttribute('index')].replace(that.reg,'/$1'),
+				b=tk.getHtmlElement('b'),
+					bList=that.container.getElementsByTagName('b');
+				tk.each(bList,function(a,b){
+					try{
+						b.parentNode.removeChild(b);
+					}catch(e){}
+				});
+
+				try{
+					tk.setClipboardText(e,data);
+					elem.parentNode.appendChild(b);
+					b.innerHTML='复制成功';
+				}catch(e){
+					if(/firefox/i.test(navigator.userAgent)){
+						alert('剪贴板操作禁止，设置firefox signed.applets.codebase_principal_support为true');
+					}
+				}
+
+			},
+			creatList:function(){
+				var that=this,i=0,len=that.data.length;
+
+				for(;i<len;){
+					delete function(a){
+						if(that.data[a]==='') return;
+						that.reg.lastIndex=0;
+						that.html.push('<tr><td><img src="'+that.data[a]+'" /> </td><td><a href="'+that.data[a].replace(that.reg,'/$1')+'" >'+that.data[a].replace(that.reg,'/$1')+'</a><br /><input type="button" value=" 复制链接 " index="'+a+'" /></td></tr>');
+						that.total.innerHTML=(a+1);
+					}(i++);
+				}
+
+				that.container.innerHTML=that.html.join('');
+			}
+		}
+
+		imageList.init();
+	})();
+</script>
+</body>
+</html>

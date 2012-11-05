@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* ==========cssreset========== */
+html { overflow: hidden; } 
+body { font:12px/20px "微软雅黑","黑体", "宋体"; color:#444; background: white; }
+*{ padding:0; margin:0; font-style: normal; list-style: none; }
+a  { text-decoration:none; color: #000; }
+a:visited { color: #C39; }
+a:hover{ color:red; text-decoration:underline; }
+a img { border:none;}
+table { border-collapse:collapse;}
+input[type='text'],input[type='url'],input[type='number'],input[type='range'],input[type='file'] { border:solid 1px #ccc; padding:2px; border-radius:3px; }
+input[type='file'] { border:none; }
+input[type='text']:focus,input[type='url']:focus,input[type='number']:focus,input[type='range']:focus { border-color:#4D90FE; box-shadow:0px 0px 10px #4D90FE; }
+.box { width:100%; overflow:hidden; clear:both; margin:0 auto 10px; }
+/* ==========cssreset========== */
