@@ -1,5 +1,5 @@
 /*
- * Accordion v1.0
+ * Animate v1.0
  *
  * Copyright 2011, enix
 
